@@ -1,0 +1,44 @@
+La facture contient plusieurs éléments clés, y compris :
+
+Référence de la facture
+Date de facturation
+Date d'échéance
+Code client
+Émetteur (y compris les détails de contact)
+Destinataire (y compris les détails de contact)
+Désignation du produit
+Taux de TVA
+Prix unitaire hors taxe (P.U. HT)
+Quantité
+Total hors taxe (Total HT)
+Conditions de règlement
+Total de la TVA
+Total toutes taxes comprises (Total TTC)
+
+---------------------------------------------------------
+
+Table Facture : Cette table contient des informations sur chaque facture. Les attributs pourraient inclure :
+
+FactureID : Un identifiant unique pour chaque facture.
+DateFacture : La date à laquelle la facture a été créée.
+ClientID : Un identifiant pour le client à qui la facture a été émise. Cela serait une clé étrangère reliant à la table Client.
+Note : Une note ou un commentaire sur la facture.
+Table Client : Cette table stocke les informations sur chaque client. Les attributs pourraient inclure :
+
+ClientID : Un identifiant unique pour chaque client.
+Nom : Le nom du client.
+Adresse : L'adresse du client.
+Table Produit : Cette table stocke les informations sur chaque produit ou service qui peut être facturé. Les attributs pourraient inclure :
+
+ProduitID : Un identifiant unique pour chaque produit.
+Nom : Le nom du produit.
+Prix : Le prix du produit.
+TauxTVA : Le taux de TVA applicable au produit.
+Table LigneFacture : Cette table représente les lignes d'articles sur chaque facture. Elle fait le lien entre les factures et les produits. Les attributs pourraient inclure :
+
+LigneFactureID : Un identifiant unique pour chaque ligne de facture.
+FactureID : L'identifiant de la facture à laquelle la ligne d'article appartient. Cela serait une clé étrangère reliant à la table Facture.
+ProduitID : L'identifiant du produit qui est facturé sur cette ligne. Cela serait une clé étrangère reliant à la table Produit.
+Quantité : La quantité du produit qui est facturée sur cette ligne.
+
+
